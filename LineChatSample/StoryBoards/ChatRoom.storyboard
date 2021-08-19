@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Chat Room View Controller-->
+        <scene sceneID="vPB-aC-Na1">
+            <objects>
+                <viewController storyboardIdentifier="ChatRoomViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="XM6-uf-SWJ" customClass="ChatRoomViewController" customModule="LineChatSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pwb-ye-Cqo">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hvh-ai-xHY">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="u98-Sr-rHg">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="u98-Sr-rHg" id="kAR-Wr-xSM">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="bbP-yG-9pH"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="hvh-ai-xHY" firstAttribute="top" secondItem="bbP-yG-9pH" secondAttribute="top" id="Box-4u-CdS"/>
+                            <constraint firstItem="bbP-yG-9pH" firstAttribute="bottom" secondItem="hvh-ai-xHY" secondAttribute="bottom" id="a06-ek-Wye"/>
+                            <constraint firstItem="bbP-yG-9pH" firstAttribute="trailing" secondItem="hvh-ai-xHY" secondAttribute="trailing" id="eQP-Jj-rnu"/>
+                            <constraint firstItem="hvh-ai-xHY" firstAttribute="leading" secondItem="bbP-yG-9pH" secondAttribute="leading" id="ibQ-82-aKU"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="eG3-8W-zXc"/>
+                    <connections>
+                        <outlet property="chatRoomTableView" destination="hvh-ai-xHY" id="Nw4-lu-2zc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b5A-dB-ZFO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1079.7101449275362" y="179.46428571428569"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="xMB-ng-UI6">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PHw-0Q-kMI" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gAd-uN-AMy">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="XM6-uf-SWJ" kind="relationship" relationship="rootViewController" id="Ce9-xv-KAe"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vZB-hd-sXm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="169.56521739130437" y="179.46428571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

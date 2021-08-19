@@ -1,0 +1,6 @@
+framework module Pods_LineChatSampleTests {
+  umbrella header "Pods-LineChatSampleTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
